@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecondDialog</class>
+ <widget class="QDialog" name="SecondDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Second Window</string>
+  </property>
+  <widget class="QToolButton" name="sendToFirstTButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset theme="applications-games">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="secondFormLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>261</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="secondFormTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>261</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="sendToMainTButton">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>30</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Send text data to Main..</string>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset theme="applications-office">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="receiveFromMainTButton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>30</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Receite Text Data From Main...</string>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+   <property name="icon">
+    <iconset theme="folder">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>sendToFirstTButton</sender>
+   <signal>pressed()</signal>
+   <receiver>SecondDialog</receiver>
+   <slot>sendTextDataToFirst()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sendToMainTButton</sender>
+   <signal>pressed()</signal>
+   <receiver>SecondDialog</receiver>
+   <slot>sendTextDataToMain()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>receiveFromMainTButton</sender>
+   <signal>pressed()</signal>
+   <receiver>SecondDialog</receiver>
+   <slot>sendCommanToMain()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>sendTextDataToFirst()</slot>
+  <slot>sendTextDataToMain()</slot>
+  <slot>sendCommanToMain()</slot>
+ </slots>
+</ui>
